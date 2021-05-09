@@ -263,3 +263,5 @@ d) Now you can create a PHP script that will connect to MySQL and query for your
 - [ ]	http://<Public_domain_or_IP>/todo_list.php
 
 ![6 d iv](https://user-images.githubusercontent.com/10243139/117577616-6cd61900-b0e2-11eb-81de-f98eec62552f.jpg)
+
+In this project, we have built a flexible foundation for serving PHP websites and applications to visitors, using Nginx as web server and MySQL as database management system.
