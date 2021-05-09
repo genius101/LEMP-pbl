@@ -133,4 +133,47 @@ b) Then, open a new configuration file in Nginx’s sites-available directory us
 		
 - [ ]	http://<Public-IP-Address>:80
 
+![4 b viii](https://user-images.githubusercontent.com/10243139/117576255-2336ff80-b0dd-11eb-8967-e844a08114dc.jpg)
 
+
+
+Step 5 – Testing PHP with Nginx
+
+
+a) We would test to Validate that Nginx can correctly hand .php files off to our PHP processor.
+
+- [x]	You can do this by creating a test PHP file in your document root:
+
+- [ ]	nano /var/www/projectLEMP/info.php
+
+- [x]	Type or paste the following lines into the new file. This is valid PHP code that will return information about your server:
+
+		<?php
+		phpinfo();
+		
+![5 a ii](https://user-images.githubusercontent.com/10243139/117576355-9cceed80-b0dd-11eb-9dc0-9368ae198dd8.jpg)
+
+- [x]	You can now access this page in your web browser by visiting the public IP address you’ve set up in your Nginx configuration file, followed by /info.php
+
+![5 a iii](https://user-images.githubusercontent.com/10243139/117576420-d9024e00-b0dd-11eb-86c2-b65421582bdf.jpg)
+
+- [x]	it’s best to remove the file you created as it contains sensitive information about your PHP environment and your Ubuntu server. You can use rm to remove that file:
+		
+- [ ]	sudo rm /var/www/projectLEMP/info.php
+
+
+Step 6 — Retrieving data from MySQL database with PHP
+
+a) In this step we will create a test database (DB) with simple “To do list” and configure access to it, so the Nginx website would be able to query data from the DB and display it. We will create a database named example_database and a user named example_user:
+
+- [x]	Connect to the MySQL console using the root account:	
+		
+- [ ]	sudo mysql
+
+- [x]	To create a new database, run the following command from your MySQL console:
+
+- [ ]	CREATE DATABASE `example_database`;
+
+- [x]	Now we can create a new user and grant him full privileges on the database you have just created. Username as example_user and password as password:
+
+- [ ]	CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
