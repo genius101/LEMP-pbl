@@ -107,7 +107,7 @@ server {
 
 ![4 b ii](https://user-images.githubusercontent.com/10243139/117575413-8c1c7880-b0d9-11eb-97a9-5647bb7bbe66.jpg)
 
--[x]	Activate your configuration by linking to the config file from Nginx’s sites-enabled directory:
+- [x]	Activate your configuration by linking to the config file from Nginx’s sites-enabled directory:
 
--[ ]	sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
+- [ ]	sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
 
