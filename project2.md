@@ -24,4 +24,25 @@ b) To verify that Nginx Web Server is running, use following command:
 
 Step 2 — Installing MySQL
 
+a) Use ‘apt’ to acquire and install mysql-server
+	
+- [ ]	sudo apt install mysql-server
+
+- [ ]	Run security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system
+		VALIDATE PASSWORD COMPONENT - Y
+		Level of Password I choose 0 for LOW
+		Enter a secure password and confirm password
+		Every other step was Y or or y Yes
+		Reload priviledge tables - Y
+		Success. All done!
+    
+b) Log in to the MySQL console and Exit back to Ubuntu Console
+
+- [ ]	sudo mysql	
+
+- [ ] exit
+
+![2](https://user-images.githubusercontent.com/10243139/117574774-9be68d80-b0d6-11eb-9c8c-967bc20427a3.jpg)
+
+
 
