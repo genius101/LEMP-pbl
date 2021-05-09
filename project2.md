@@ -172,7 +172,7 @@ a) In this step we will create a test database (DB) with simple “To do list”
 
 - [x]	To create a new database, run the following command from your MySQL console:
 
-- [ ]	CREATE DATABASE `example_database`;
+- [ ]	CREATE DATABASE ``example_database``;
 
 - [x]	Now we can create a new user and grant him full privileges on the database you have just created. Username as example_user and password as password:
 
