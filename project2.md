@@ -77,18 +77,18 @@ b) Then, open a new configuration file in Nginx’s sites-available directory us
 
 - [x]	Insert the following configuration:
 		
-#/etc/nginx/sites-available/projectLEMP
+	#/etc/nginx/sites-available/projectLEMP
 
-server {
-    listen 80;
-    server_name projectLEMP www.projectLEMP;
-    root /var/www/projectLEMP;
-
-   index index.html index.htm index.php;
-
-   location / {
-   try_files $uri $uri/ =404;
-    }
+	server {
+    	listen 80;
+    	server_name projectLEMP www.projectLEMP;
+    	root /var/www/projectLEMP;
+	
+	index index.html index.htm index.php;
+	
+	location / {
+   	try_files $uri $uri/ =404;
+    	}
 
    location ~ \.php$ {
    include snippets/fastcgi-php.conf;
