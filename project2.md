@@ -180,5 +180,86 @@ a) In this step we will create a test database (DB) with simple “To do list”
 
 - [ ]	CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 
+- [x]	Now we need to give this user permission over the example_database database:
+
+- [ ]	GRANT ALL ON example_database.* TO 'example_user'@'%';
+	(This is not in the image below, please dont forget to run this command before you exit)
+
+- [x]	Now exit using the command exit
+
 ![6 a](https://user-images.githubusercontent.com/10243139/117576924-875ac300-b0df-11eb-9bf2-5f0cbee56b4f.jpg)
 
+
+b) Test the new credential created
+
+- [x]	Log on with the new user created, and input the password when prompted:
+	
+- [ ]	mysql -u example_user -p
+
+- [x]	Confirm that you have access to the example_database database:
+		
+- [ ]	show DATABASES;
+
+![6 b](https://user-images.githubusercontent.com/10243139/117577243-ecfb7f00-b0e0-11eb-8669-443068c45da7.jpg)
+
+c) Next, we’ll create a test table named todo_list
+
+- [x]	 From the MySQL console, run the following statement:
+
+		CREATE TABLE example_database.todo_list (
+		mysql>     item_id INT AUTO_INCREMENT,
+		mysql>     content VARCHAR(255),
+		mysql>     PRIMARY KEY(item_id)
+		mysql> );
+		
+- [x]	Insert a few rows:
+
+		INSERT INTO example_database.todo_list (content) VALUES ("My First Important Item")
+		INSERT INTO example_database.todo_list (content) VALUES ("My Second Important Item")
+		INSERT INTO example_database.todo_list (content) VALUES ("My Third Important Item")
+		
+![6 c ii](https://user-images.githubusercontent.com/10243139/117577365-61ceb900-b0e1-11eb-9485-b407a0dfada9.jpg)
+
+- [x]	To confirm that the data was successfully saved to your table, run:
+
+- [ ]	SELECT * FROM example_database.todo_list;
+
+- [x]	You can exit the MySQL by typing exit
+
+![6 c iv](https://user-images.githubusercontent.com/10243139/117577421-9e9ab000-b0e1-11eb-9954-4b9e0a2ace23.jpg)
+
+d) Now you can create a PHP script that will connect to MySQL and query for your content.
+
+- [x]	 Create a new PHP file in your custom web root directory using your preferred editor: 
+	
+- [ ]	nano /var/www/projectLEMP/todo_list.php
+
+- [x]	Copy this content into your todo_list.php script:
+
+		<?php
+		$user = "example_user";
+		$password = "password";
+		$database = "example_database";
+		$table = "todo_list";
+
+		try {
+  		   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  		   echo "<h2>TODO</h2><ol>";
+  		   foreach($db->query("SELECT content FROM $table") as $row) {
+    		      echo "<li>" . $row['content'] . "</li>";
+  		   }
+  		   echo "</ol>";
+		} catch (PDOException $e) {
+    		      print "Error!: " . $e->getMessage() . "<br/>";
+    		      die();
+		}
+
+![6 d ii](https://user-images.githubusercontent.com/10243139/117577576-3dbfa780-b0e2-11eb-9c6d-9122037b6374.jpg)
+
+- [x]	Save and close the file when you are done editing.
+	
+- [x]	You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, followed by /todo_list.php:
+		
+- [ ]	http://<Public_domain_or_IP>/todo_list.php
+
+![6 d iv](https://user-images.githubusercontent.com/10243139/117577616-6cd61900-b0e2-11eb-81de-f98eec62552f.jpg)
