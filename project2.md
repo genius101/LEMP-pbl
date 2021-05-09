@@ -29,12 +29,18 @@ a) Use ‘apt’ to acquire and install mysql-server
 - [ ]	sudo apt install mysql-server
 
 - [ ]	Run security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system
-		VALIDATE PASSWORD COMPONENT - Y
-		Level of Password I choose 0 for LOW
-		Enter a secure password and confirm password
-		Every other step was Y or or y Yes
-		Reload priviledge tables - Y
-		Success. All done!
+
+- [ ]	VALIDATE PASSWORD COMPONENT - Y
+
+- [ ] 	Level of Password I choose 0 for LOW
+	
+- [ ] 	Enter a secure password and confirm password
+
+- [ ]	Every other step was Y or or y Yes
+	
+- [ ] 	Reload priviledge tables - Y
+	
+	Success. All done!
     
 b) Log in to the MySQL console and Exit back to Ubuntu Console
 
