@@ -70,7 +70,44 @@ a) Create the root web directory for your_domain as follows:
 
 - [ ]	sudo chown -R $USER:$USER /var/www/projectLEMP 
 
+![4 a](https://user-images.githubusercontent.com/10243139/117575113-57f48800-b0d8-11eb-8bc5-94689640f9a4.jpg)
 
+b) Then, open a new configuration file in Nginx’s sites-available directory using your preferred command-line editor. Here, we’ll use nano:
+- [ ]	sudo nano /etc/apache2/sites-available/projectesla.conf
 
+- [x]	Insert the following configuration:
+		
+#/etc/nginx/sites-available/projectLEMP
 
+server {
+    listen 80;
+    server_name projectLEMP www.projectLEMP;
+    root /var/www/projectLEMP;
+
+   index index.html index.htm index.php;
+
+   location / {
+   try_files $uri $uri/ =404;
+    }
+
+   location ~ \.php$ {
+   include snippets/fastcgi-php.conf;
+   fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+   }
+
+   location ~ /\.ht {
+   deny all;
+   }
+
+   }
+
+- [x]	Hit ctrl x to exit
+- [x]	Type y to save
+- [x]	Hit enter to save and exit back to the Ubuntu console
+
+![4 b ii](https://user-images.githubusercontent.com/10243139/117575413-8c1c7880-b0d9-11eb-97a9-5647bb7bbe66.jpg)
+
+-[x]	Activate your configuration by linking to the config file from Nginx’s sites-enabled directory:
+
+-[ ]	sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
 
