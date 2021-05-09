@@ -14,3 +14,14 @@ a) Install Nginx Web Server and check for status
 
 ![1 a](https://user-images.githubusercontent.com/10243139/117574572-a48a9400-b0d5-11eb-8c23-a50fee24bef3.jpg)
 
+
+b) To verify that Nginx Web Server is running, use following command:
+
+- [ ] http://<Public-IP-Address>:80
+
+![1 b](https://user-images.githubusercontent.com/10243139/117574662-1ebb1880-b0d6-11eb-81df-af9185c7e28e.jpg)
+
+
+Step 2 — Installing MySQL
+
+
