@@ -8,9 +8,9 @@ Step 1 – Installing the Nginx Web Server
 
 a) Install Nginx Web Server and check for status
 
-i)	sudo apt update
-ii)	sudo apt install nginx
-iii)	sudo systemctl status nginx
+- [ ]	sudo apt update
+- [ ]	sudo apt install nginx
+- [ ]	sudo systemctl status nginx
 
 ![1 a](https://user-images.githubusercontent.com/10243139/117574572-a48a9400-b0d5-11eb-8c23-a50fee24bef3.jpg)
 
