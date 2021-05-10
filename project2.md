@@ -132,7 +132,7 @@ b) Then, open a new configuration file in Nginx’s sites-available directory us
 
 - [x]	Now go to your browser and try to open your website URL using IP address:
 		
-- [ ]	http://<Public-IP-Address>:80
+- [ ]	http://Public-IP-Address:80
 
 ![4 b viii](https://user-images.githubusercontent.com/10243139/117576255-2336ff80-b0dd-11eb-8967-e844a08114dc.jpg)
 
@@ -261,7 +261,7 @@ d) Now you can create a PHP script that will connect to MySQL and query for your
 	
 - [x]	You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, followed by /todo_list.php:
 		
-- [ ]	http://<Public_domain_or_IP>/todo_list.php
+- [ ]	http://Public_domain_or_IP/todo_list.php
 
 ![6 d iv](https://user-images.githubusercontent.com/10243139/117577616-6cd61900-b0e2-11eb-81de-f98eec62552f.jpg)
 
