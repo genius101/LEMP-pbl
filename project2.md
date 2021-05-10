@@ -95,7 +95,7 @@ b) Then, open a new configuration file in Nginx’s sites-available directory us
         		fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
      			}
 
-   			location ~ /\.ht {
+   				location ~ /\.ht {
         		deny all;
     			}
 
