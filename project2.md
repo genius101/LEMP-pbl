@@ -17,7 +17,7 @@ a) Install Nginx Web Server and check for status
 
 b) To verify that Nginx Web Server is running, use following command:
 
-- [x]	http://<Public-IP-Address>:80
+- [x]	From the Browser http://<Public-IP-Address>:80
 
 ![1 b](https://user-images.githubusercontent.com/10243139/117574662-1ebb1880-b0d6-11eb-81df-af9185c7e28e.jpg)
 
