@@ -125,7 +125,8 @@ b) Then, open a new configuration file in Nginx’s sites-available directory us
 
 - [ ]	sudo systemctl reload nginx
 
-- [x]	Your new website is now active, but the web root /var/www/projectLEMP is still empty. Create an index.html file in that location so that we can test that your new server block works as expected:
+- [x]	Your new website is now active, but the web root /var/www/projectLEMP is still empty. 
+- [x]	Create an index.html file in that location so that we can test that your new server block works as expected:
 
 - [ ]	sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
 
